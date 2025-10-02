@@ -190,7 +190,7 @@ class _FoodDetailState extends State<FoodDetail> {
         ),
         child: const Text(
           'Beli',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
     );

@@ -4,8 +4,9 @@ import 'dummy_menu.dart';
 
 class FoodDetail extends StatefulWidget {
   final FoodMenu daftar;
-  
-  const FoodDetail({super.key, required this.daftar});
+  final String username;
+  const FoodDetail({super.key, required this.daftar, required this.username,
+  });
 
   @override
   State<FoodDetail> createState() => _FoodDetailState();
@@ -165,7 +166,7 @@ class _FoodDetailState extends State<FoodDetail> {
             Navigator.pop(
               context,
               MaterialPageRoute(
-                builder: (context) => homePage(username: username,),
+                builder: (context) => homePage(username: widget.username),
               ),
             );
           }
@@ -180,7 +181,7 @@ class _FoodDetailState extends State<FoodDetail> {
           ScaffoldMessenger.of(context).showSnackBar(snack);
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.brown[700],
+          backgroundColor: Colors.grey,
           foregroundColor: Colors.white,
           elevation: 2,
           shape: RoundedRectangleBorder(

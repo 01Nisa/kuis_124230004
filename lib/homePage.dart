@@ -5,7 +5,8 @@ import 'foodDetail.dart';
 
 class homePage extends StatelessWidget {
   final String username;
-  const homePage({super.key, required this.username});
+  const homePage({super.key, required this.username, });
+  
 
   Widget _buildTopBar() {
     return Padding(
@@ -96,7 +97,7 @@ class homePage extends StatelessWidget {
                 Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => FoodDetail(daftar: daftar),
+                    builder: (context) => FoodDetail(username: username, daftar: daftar),
                 ),
                 );
             },
